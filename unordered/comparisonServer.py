@@ -68,6 +68,7 @@ def waitForLogsAndCompare(N_MSGS):
 		for i in range(1,N-1):
 			if firstMsg != msgs[i][j]:
 				unordered = unordered + 1
+				print(f'Message {msgs[i][j][1]} from process {msgs[i][j][0]} was undordered')
 				break
 	
 	print ('Found ' + str(unordered) + ' unordered message rounds')
